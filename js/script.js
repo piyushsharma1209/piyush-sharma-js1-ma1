@@ -1,16 +1,16 @@
-const cats = [
-    {
-        name: "Blob",
-        age: 10
-    },
-    {
-        name: "Harold",
-    },
-    {
-        name: "Blurt",
-        age: 21
+
+
+// Question 1
+
+const cat = {
+    complain: function () {
+        console.log("Meow!");
     }
-];
+};
+
+cat.complain();
+
+console.log(cat)
 
 
 
@@ -42,3 +42,44 @@ for (let i = 0; i < resultsContainers.length; i++) {
     resultsContainers[i].style.color = "yellow";
     resultsContainers[i].innerHTML = "<p>New Paragraph<p>";
 }
+
+// Quetion 7; Did not understand.
+
+
+// Quetion 8
+
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
+const container = document.querySelector(".cat-container")
+
+console.log(container);
+
+let html = "";
+
+for (let i = 0; i < cats.length; i++) {
+
+    if (cats[i].age === "undefined") {
+        age = "Age Unknown";
+    }
+
+
+    html += "<div>" + "<h5>" + cats[i].name + "</h5>" + "</div>";
+    html += "<div>" + "<p>" + cats[i].age + "</p>" + "</div>";
+
+    console.log(html);
+
+}
+
+container.innerHTML = html;
